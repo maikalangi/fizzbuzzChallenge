@@ -4,29 +4,22 @@
 // For numbers divisible by 5, print "Buzz"
 // For numbers divisible by both 3 && 5, print "FizzBuzz"
 
-// Hint: you will have to google the term modulo
-
-// Remember there are multiple ways to find a solution to this problem. To get your started...
-
-if (conditionOne) {
-    console.log('numbers associated with condition one');
-  } else {
-    console.log('numbers associated with some other condition');
+let x=1;
+const fizzBuzz=(num)=>{
+  for (let i=num;i<=100;i++){
+    if (i%3==0 && i%5==0){
+      console.log('FizzBuzz')
+    }else if(i%3==0){
+      console.log('Fizz')
+    }else if(i%5==0){
+      console.log('Buzz')
+    }
+    else{
+      console.log(i)
+    }
   }
-  
-  // or
-  
-  for(let i=0; i<=100; i++){
-    console.log(i)
-  }
-  
-  // or
-  
-  let num = 0;
-  do {
-      console.log(num);
-      num ++ 2;
-  } while (num <= 100);
+};
+fizzBuzz(x);
   
   // ==========================================================================
   // ==========================BONUS CHALLENGE=================================
@@ -34,3 +27,12 @@ if (conditionOne) {
   // Too easy? here's an additional challenge, create a function that returns the average of the numbers in an array.
   
   // No hints necessary, you got this :)
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const average=(num)=>{
+    let j=0;
+    for (let i=0;i<num.length;i++){
+      j += num[i];
+    }
+    console.log(j/num.length)
+  };
+  average(arr);
